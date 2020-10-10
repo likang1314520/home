@@ -1,0 +1,64 @@
+{
+  "_args": [
+    [
+      "@bbt/mt-utils-ua@1.1.22",
+      "/Users/liyanfang/work/starDoctor/m-stardoctor-patient"
+    ]
+  ],
+  "_from": "@bbt/mt-utils-ua@1.1.22",
+  "_id": "@bbt/mt-utils-ua@1.1.22",
+  "_inBundle": false,
+  "_integrity": "sha512-QKogvGuZt+xhJvmRN0GoUszu66exZafRQF4w3XQVEB9H8rtmjmMhWgzuqpnj3dLhO5ACokJqp4GGwaOoCQRtRA==",
+  "_location": "/@bbt/mt-utils-ua",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@bbt/mt-utils-ua@1.1.22",
+    "name": "@bbt/mt-utils-ua",
+    "escapedName": "@bbt%2fmt-utils-ua",
+    "scope": "@bbt",
+    "rawSpec": "1.1.22",
+    "saveSpec": null,
+    "fetchSpec": "1.1.22"
+  },
+  "_requiredBy": [
+    "/",
+    "/@bbt/mt-utils-env"
+  ],
+  "_resolved": "http://npm.mtmm.com/@bbt%2fmt-utils-ua/-/mt-utils-ua-1.1.22.tgz",
+  "_spec": "1.1.22",
+  "_where": "/Users/liyanfang/work/starDoctor/m-stardoctor-patient",
+  "author": "",
+  "dependencies": {
+    "babel-core": "^6.26.0"
+  },
+  "description": "基础工具类",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.1.2",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.14.0",
+    "eslint-loader": "^1.9.0",
+    "lerna": "^2.11.0",
+    "lodash": "^4.17.4",
+    "mocha": "^5.1.1",
+    "uglifyjs-webpack-plugin": "^1.1.2",
+    "webpack": "^4.0.0",
+    "webpack-cli": "^2.1.3"
+  },
+  "gitHead": "9940d56bd0dd758ea00adb3a9b3fb65349378bae",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "@bbt/mt-utils-ua",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register"
+  },
+  "version": "1.1.22"
+}

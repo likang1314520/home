@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script src="../dist/bundle.js"></script>
+
+<body data-loadtrack="abc">
+
+
+<a href = "/a.html" target="_blank" data-track="bcd">跳转测试</a>
+<a href = "javascript:;;" target="_blank" data-track="a1">不跳转测试</a>
+
+
+<script>
+
+    mtUtils.Track.doPublicTracker();
+    mtUtils.TrackLisener.addClickListenner();
+</script>
+
+</body>
+</html>

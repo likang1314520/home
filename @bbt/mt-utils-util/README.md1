@@ -1,0 +1,68 @@
+## 组件说明
+   基础工具类.
+
+   * base64工具类 Base64Utils
+   * 对象操作类 ObjUtils
+   * url操作类  UrlUtils
+
+## 组件引入方式
+ ```
+ import {ObjUtils} from '@bbt/mt-utils-util';
+ import {UrlUtils} from '@bbt/mt-utils-util';
+ import {Base64Utils} from '@bbt/mt-utils-util';
+import {LoadScript} from '@bbt/mt-utils-util';
+
+
+ ```
+
+## 方法调用说明
+
+###对象操作类 ObjUtils
+```
+//判断对象是否为空.空 return 1，非空 return 0
+ ObjUtils.isEmptyObject(obj);
+
+ //对象合并.
+ let obj = ObjUtils.extend(obj1,obj2,obj3);
+
+```
+
+### base64工具类 Base64Utils
+```
+//对字符串进行base64解码，通常用于token对象的解码.
+Base64Utils.base64Decode(str);
+
+```
+
+### url操作类
+
+```
+	//return {loc:'',params:{},append:''}	//loc:不带参数的url地址
+	//params:参数集合
+	//append:#号字符串
+	let obj = UrlUtils.parseUrl(url);
+
+	//解析的参数集合
+	let params = UrlUtils.getParams(url);
+
+	//UrlUtils.parseUrl解析的参数转换成url地址.
+	let url = UrlUtils.toCusString(obj);
+
+	//追加参数.
+	let url = UrlUtils.appendParams(url,obj);
+
+	//判断url是否有参数
+	let flag = UrlUtils.hasParam(url);
+
+	//参数移除
+	let url = UrlUtils.removeParams(url,arr);
+
+	//获取参数
+	let value = UrlUtils.getUrlParamByName(name);
+
+	//判断是否为链接
+	let flag = UrlUtils.isLinkRef(link);
+
+	//往href里面追加参数，注意此处使用的不是url链接.
+	let href = UrlUtils.appendHref(href,key,value);
+```

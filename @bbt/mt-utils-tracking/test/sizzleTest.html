@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script src="sizzle.js"></script>
+
+<body>
+
+<div data-moduleId = "123">
+<div areaFlag="1232">
+
+    <div id="test"></div>
+
+</div>
+</div>
+
+<script>
+
+    /**
+     * 获取结点的上级元素.
+     * @param dom
+     * @param seletor
+     */
+    function getParent(elem){
+        let parent = elem.parentNode;
+        return parent && parent.nodeType !== 11 ? parent : null;
+    }
+
+    /**
+     * 获取结点的祖先元素.
+     */
+    function getParents(elem,seletor){
+        //用于存储结果数组
+        let matched = [];
+
+        cur = elem.parentNode;
+
+        while ( cur && cur.nodeType !== 9 && ( cur.nodeType !== 1 || !Sizzle.matchesSelector(cur,seletor)) ) {
+            if ( cur.nodeType === 1 ) {
+                matched.push( cur );
+            }
+            cur = cur.parentNode;
+        }
+        return matched;
+    }
+
+    console.log(getParent(Sizzle("#test")[0]));
+
+    console.log(getParents(Sizzle("#test")[0],"[data-moduleId]"));
+
+</script>
+
+</body>
+</html>
